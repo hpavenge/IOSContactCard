@@ -12,6 +12,8 @@
 		2493DA551F56B5DD00674439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2493DA531F56B5DD00674439 /* Main.storyboard */; };
 		2493DA571F56B5DD00674439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2493DA561F56B5DD00674439 /* Assets.xcassets */; };
 		2493DA5A1F56B5DD00674439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2493DA581F56B5DD00674439 /* LaunchScreen.storyboard */; };
+		2493DA621F56BA8900674439 /* Person.png in Resources */ = {isa = PBXBuildFile; fileRef = 2493DA611F56BA8900674439 /* Person.png */; };
+		2493DA641F56BF4000674439 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493DA631F56BF4000674439 /* SummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2493DA561F56B5DD00674439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2493DA591F56B5DD00674439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2493DA5B1F56B5DD00674439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2493DA611F56BA8900674439 /* Person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Person.png; path = ../../../Downloads/Person.png; sourceTree = "<group>"; };
+		2493DA631F56BF4000674439 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 				2493DA511F56B5DD00674439 /* ViewController.swift */,
 				2493DA531F56B5DD00674439 /* Main.storyboard */,
 				2493DA561F56B5DD00674439 /* Assets.xcassets */,
+				2493DA611F56BA8900674439 /* Person.png */,
 				2493DA581F56B5DD00674439 /* LaunchScreen.storyboard */,
 				2493DA5B1F56B5DD00674439 /* Info.plist */,
+				2493DA631F56BF4000674439 /* SummaryViewController.swift */,
 			);
 			path = ContactCard;
 			sourceTree = "<group>";
@@ -123,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2493DA621F56BA8900674439 /* Person.png in Resources */,
 				2493DA5A1F56B5DD00674439 /* LaunchScreen.storyboard in Resources */,
 				2493DA571F56B5DD00674439 /* Assets.xcassets in Resources */,
 				2493DA551F56B5DD00674439 /* Main.storyboard in Resources */,
@@ -138,6 +145,7 @@
 			files = (
 				2493DA521F56B5DD00674439 /* ViewController.swift in Sources */,
 				2493DA501F56B5DD00674439 /* AppDelegate.swift in Sources */,
+				2493DA641F56BF4000674439 /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

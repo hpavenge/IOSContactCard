@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Summary View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SummaryViewController" customModule="ContactCard" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Person" translatesAutoresizingMaskIntoConstraints="NO" id="BKY-Ib-hbz" userLabel="Face">
+                                <rect key="frame" x="112.5" y="60" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="5DE-nQ-fRm"/>
+                                    <constraint firstAttribute="width" constant="150" id="Sjl-XG-7G1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdQ-1E-PWY" userLabel="lbFirstName">
+                                <rect key="frame" x="16" y="240" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yka-28-fuJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2A-3N-ChG" userLabel="lbLastName">
+                                <rect key="frame" x="16" y="281" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yuN-iq-C3C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sj-D6-GMl">
+                                <rect key="frame" x="147" y="587" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="1ZQ-dU-eaG"/>
+                                    <constraint firstAttribute="height" constant="30" id="rpp-q9-BSs"/>
+                                </constraints>
+                                <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="generateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uPw-Xb-noo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kdQ-1E-PWY" firstAttribute="top" secondItem="BKY-Ib-hbz" secondAttribute="bottom" constant="30" id="41c-az-jf1"/>
+                            <constraint firstItem="f2A-3N-ChG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5cl-0W-kL1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3sj-D6-GMl" secondAttribute="bottom" constant="50" id="5q5-ab-mkP"/>
+                            <constraint firstItem="kdQ-1E-PWY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SQP-4N-2ZE"/>
+                            <constraint firstItem="f2A-3N-ChG" firstAttribute="top" secondItem="kdQ-1E-PWY" secondAttribute="bottom" constant="20" id="Z1T-r3-ZE7"/>
+                            <constraint firstItem="3sj-D6-GMl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c58-U3-bsU"/>
+                            <constraint firstItem="BKY-Ib-hbz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="fp4-Kt-GNR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kdQ-1E-PWY" secondAttribute="trailing" id="kpD-VV-cpO"/>
+                            <constraint firstItem="kdQ-1E-PWY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m8Z-uE-4qS"/>
+                            <constraint firstItem="BKY-Ib-hbz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mRl-8t-PWR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f2A-3N-ChG" secondAttribute="trailing" id="tNd-Sf-Qcd"/>
+                            <constraint firstItem="f2A-3N-ChG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tmA-Zx-v3S"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceImageView" destination="BKY-Ib-hbz" id="ZiP-Sr-ZuP"/>
+                        <outlet property="firstNameLabel" destination="kdQ-1E-PWY" id="V5M-Oc-ZIu"/>
+                        <outlet property="generateButton" destination="3sj-D6-GMl" id="z2Q-Tg-2r3"/>
+                        <outlet property="lastNameLabel" destination="f2A-3N-ChG" id="9mh-tn-hSv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="43.628185907046479"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Person" width="542" height="560"/>
+    </resources>
 </document>
